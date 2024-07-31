@@ -19,12 +19,13 @@ module ActiveAdmin
       }
     end
 
-    def self.edit_select(field, url)
+    def self.edit_select(field, url, initial_value)
       {
         'data-field': field,
         'data-field-type': 'select',
         'data-save-url': url,
-        'data-show-errors': '1'
+        'data-show-errors': '1',
+        'data-initial-value': initial_value
       }
     end
 

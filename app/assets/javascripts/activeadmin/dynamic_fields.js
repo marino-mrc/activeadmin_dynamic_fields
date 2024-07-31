@@ -171,6 +171,8 @@
         },
         success: function (data, _status, _req) {
           if (data.status === 'error') {
+            $(this).val($(this).data('initial-value'));
+            $(this).trigger('change');
             if ($(this).data('show-errors')) {
               let result = '';
               let message = data.message;
